@@ -14,8 +14,8 @@ jobs:
 
       - name: Download and Install OpenVINO
         run: |
-          curl -L -o openvino.exe "https://registrationcenter-download.intel.com/akdlm/irc_nas/18954/l_openvino_toolkit_p_2022.3.0.8703.exe"
-          start /wait openvino.exe --silent --accept_eula --output=C:\openvino
+          curl -L -o openvino.zip "https://storage.openvinotoolkit.org/repositories/openvino/packages/2022.3/openvino_windows.zip"
+          tar -xf openvino.zip -C C:\openvino
 
       - name: Set OpenVINO Environment
         run: |
